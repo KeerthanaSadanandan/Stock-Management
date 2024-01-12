@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>Stock Management</title>
+    <style>
+       
+        form{
+            color:white;
+        }
+        label{
+            COLOR: #034f84;
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <div class="row">
+                <form class="form-horizontal" action="stock.php" method="post" name="upload_excel" enctype="multipart/form-data">
+                    <fieldset>
+                        <!-- Form Name -->
+                        <legend style="COLOR:#588c7e;text-align: CENTER;">STOCK MANAGEMENT</legend>
+                        <!-- File Button -->
+                        <!-- UPLOAD STOCK -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="filebutton">Upload Stock</label>
+                            <div class="col-md-4">
+                                <input type="file" name="file" id="file" class="input-large">
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="singlebutton">Import data</label>
+                            <div class="col-md-4">
+                                <button type="submit" id="submit" name="Import" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
+                            </div>
+                        </div>
+                        <!-- UPLOAD SALES -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="filebutton">Upload Sales</label>
+                            <div class="col-md-4">
+                                <input type="file" name="file" id="file" class="input-large">
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="singlebutton">Import data</label>
+                            <div class="col-md-4">
+                                <button type="submit" id="submit" name="sales" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
+                            </div>
+                        </div>
+                        <!-- UPLOAD SALES RETURN -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="filebutton">Upload Sales return</label>
+                            <div class="col-md-4">
+                                <input type="file" name="file" id="file" class="input-large">
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="singlebutton">Import data</label>
+                            <div class="col-md-4">
+                                <button type="submit" id="submit" name="s_r" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
+                            </div>
+                        </div>
+                        <!-- UPLOAD PURCHASE -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="filebutton">Upload Purchase</label>
+                            <div class="col-md-4">
+                                <input type="file" name="file" id="file" class="input-large">
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="singlebutton">Import data</label>
+                            <div class="col-md-4">
+                                <button type="submit" id="submit" name="purchase" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
+                            </div>
+                        </div>
+                        <!-- UPLOAD PURCHASE RETURN -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="filebutton">Upload Purchase return</label>
+                            <div class="col-md-4">
+                                <input type="file" name="file" id="file" class="input-large">
+                            </div>
+                        </div>
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label" for="singlebutton">Import data</label>
+                            <div class="col-md-4">
+                                <button type="submit" id="submit" name="p_r" class="btn btn-primary button-loading" data-loading-text="Loading...">Import</button>
+                            </div>
+                        </div>
+                    
+                        <!-- Button -->
+                        <!-- HISTORY -->
+                        <div class="form-group">
+                            <div class="col-md-4">
+                                <button style="align-items: center;" type="submit" id="submit" name="History" class="btn btn-primary button-loading" data-loading-text="Loading...">History</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            
+            <?php
+               get_all_records();
+            ?>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+</html>
